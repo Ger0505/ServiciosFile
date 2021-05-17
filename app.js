@@ -31,7 +31,7 @@ app.get('/', (req, res) =>{
 // Upload Endpoint
 app.post('/upload', (req, res) => {
     if (req.files === null || !req.files) {
-      return res.status(400).json({ msg: 'No file uploaded' })
+      return res.status(400).json({ msg: 'No se encontró ningún archivo cargado' })
     }
 
     const file = req.files.file
